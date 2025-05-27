@@ -42,8 +42,8 @@ const locationHndle = (event) => {
         getData(lat, lon);
       },
       (error) => {
-        console.error("خطا در دریافت موقعیت:", error.message);
-        alert("لطفاً دسترسی به موقعیت مکانی را فعال کنید.");
+        console.error("Erorr", error.message);
+        alert("Please enable location access.");
       }
     );
   }
@@ -68,34 +68,6 @@ const locationHndle = (event) => {
   };
 };
 
-const swiperHndle = (event) => {
-  const width = event.target.innerWidth;
-  if (width < 572) {
-    const swiper = new Swiper(".swiper", {
-      direction: "horizontal",
-      loop: true,
-      effect: "cube",
-      cubeEffect: {
-        slideShadows: false,
-      },
-
-      autoplay: {
-        delay: 4000,
-      },
-
-      pagination: {
-        el: ".swiper-pagination",
-      },
-
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  }
-};
-
-window.addEventListener("resize", swiperHndle);
 searchBtn.addEventListener("click", searchHndle);
 locationImg.addEventListener("click", locationHndle);
 modalClose.addEventListener("click", offModal);
