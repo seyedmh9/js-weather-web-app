@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hexoia | Weather App</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="global-loader"><p class="global-loader-content">Welcome To Weather App</p></div>
+    <div class="modal-container">
+      <div class="modal-content"><span>X</span><p>TEXT Error</p></div>
+    </div>
+    <header class="container">
+      <div class="header-container">
+        <img src="./img/location.png" alt="location img" class="location-img">
+        <div class="input-container">
+          <input class="name-input" type="text" placeholder="Enter city name">
+          <button class="searchBtn">Search</button>
+        </div>
+      </div>
+      <div class="waether-container moveFromTop">
+      </div>
+    </header>
+    <main class="main">
+      <div class="swiper">
+        <div class="swiper-wrapper forcasts-container"></div>
+      </div>
+    </main>
+    <script src="./app.js" type="module"></script>
+    <script src="./utils/modal.js" type="module"></script>
+  </body>
+</html>
